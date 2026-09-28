@@ -24,6 +24,51 @@ buttons.forEach(function (button) {
   });
 });
 
+
+
+
+const navbar = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
 const btnIndividual = document.getElementById("btn-individual");
 const btnProfessional = document.getElementById("btn-professional");
 
@@ -50,47 +95,61 @@ btnIndividual.addEventListener("click", () => {
   professionalCards.classList.add("hidden");
 });
 
+
+
+
 const cards = document.querySelectorAll(".testimonial-card");
 const dots = document.querySelectorAll(".dot");
 
+let currentIndex = 0;
 
 function showCard(index) {
   cards.forEach((card, i) => {
-    // Remove previous classes
     card.classList.remove("active", "left", "right");
 
     if (i === index) {
-      // Center card
       card.classList.add("active");
     } else if (i === (index - 1 + cards.length) % cards.length) {
-      // Card on the left
       card.classList.add("left");
     } else if (i === (index + 1) % cards.length) {
-      // Card on the right
       card.classList.add("right");
     }
   });
-
-  // Change active dot
 
   dots.forEach((dot) => {
     dot.classList.remove("active");
   });
 
   dots[index].classList.add("active");
-
 }
 
-// CLICK ON DOT
+// DOT CLICK
 
 dots.forEach((dot) => {
   dot.addEventListener("click", () => {
     const index = Number(dot.dataset.index);
 
     showCard(index);
+
+    // Remember which card was clicked
+    currentIndex = index;
   });
 });
 
-// Show first card when page loads
+// AUTOMATICALLY CHANGE EVERY 4 SECONDS
+
+setInterval(() => {
+  currentIndex++;
+
+  // Go back to the first card after the last card
+  if (currentIndex >= cards.length) {
+    currentIndex = 0;
+  }
+
+  showCard(currentIndex);
+}, 4000);
+
+// Show first card initially
 
 showCard(0);
+

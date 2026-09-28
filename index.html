@@ -15,19 +15,19 @@
       <div><img src="icons/headerlogo.png" class="headerlogo"></div>
      <nav>
        <ul class="header-list">
-        <li class="list" id="Home">Home</li>
-        <li class="list" id="About">About</li>
-        <li class="list" id="Experience">Experience</li>
-        <li class="list" id="Portfolio">Portfolio</li>
-        <li class="list" id="News">News</li>
-        <li class="list" id="Contact">Contact Us</li>        
+        <a href="#home"><li class="list" id="Home">Home</li></a>
+        <a href="#about"><li class="list" id="About">About</li></a>
+        <a href="#experience"><li class="list" id="Experience">Achievements</li></a>
+        <a href="#portfolio"><li class="list" id="Portfolio">Pricing</li></a>
+        <a href="#news"><li class="list" id="News">Testimonials</li></a>
+        <a href="#contact"><li class="list" id="Contact">Contact Us</li> </a>       
        </ul>
      </nav>
       <button href="#" class="quote-btn"> Get a quote </button>
     </div>
   </header>
 
-  <section style=" height: 700px;">
+  <section style=" height: 700px;" id="home">
     <div class="hero-section">
     <div class="about">
       <p>Hello, My name is</p>
@@ -39,47 +39,19 @@
       </p>
     </div>
     <div class="profile-pic">
-      <img src="images/girl.png">
+      <img src="images/wdkds.png">
     </div>
 
     </div>
 
- <div class="wave-border">
-        <svg viewBox="0 0 1440 250" preserveAspectRatio="none">
 
-            <!-- White wave border -->
-            <path
-                d="M0 100
-                   C180 20, 300 20, 480 100
-                   C680 190, 780 230, 980 130
-                   C1160 40, 1280 40, 1440 100
-                   L1440 250
-                   L0 250
-                   Z"
-                fill="white"
-            />
-
-            <!-- Wavy line through the border -->
-            <path
-            class="wave-line"
-                d="M0 100
-                   C180 20, 300 20, 480 100
-                   C680 190, 780 230, 980 130
-                   C1160 40, 1280 40, 1440 100"
-                fill="none"
-                stroke="#6678c9"
-                stroke-width="2"
-            />
-
-        </svg>
-    </div>
 
   </section>
 
   <!--About-->
-  <section class="about-container">
+  <section class="about-container" id="about">
     <div>
-      <div class="mypic"><img src="images/men.png"></div>
+      <div class="mypic"><img src="images/image-2.png"></div>
     </div>  
       
         
@@ -144,7 +116,7 @@
 
 
     <!-- Experience -->
-    <div class="tab-content" id="experience">
+    <div class="tab-content" >
 
 
         <div class="experience-item">
@@ -194,10 +166,10 @@
   </section>
 
   <!--Achievements-->
-  <section class="st-main">
+  <section class="st-main" id="experience">
     <div class="text">
     <p >QUALIFICATION</p>
-    <h2>My <span class="title">ACHIEVEMENTS</span></h2>
+    <h2>My <span class="title">Achievements</span></h2>
     </div>
     <div class="achievement-container">
       <div class="achievements">
@@ -310,7 +282,7 @@
   </section>
 
   <!--Pricing-->
-  <section class="Plans-cards">
+  <section class="Plans-cards" id="portfolio">
     <div class="Pricing-title">
     <div class="title-description">
       <p>Pricing</p>
@@ -447,7 +419,7 @@
   </section>
 
    
-<section class="testimonials">
+<section class="testimonials" id="news">
       <div class="testimonials-info">
 
      <p>TESTIMONIAL</p>
@@ -561,7 +533,7 @@
 
 
 </section>
-<footer>
+<footer id="contact">
 <div class="footer-section">
    <div>
     <p>Copyright ©<strong> Borox</strong> all rights reserved. Powered by borox</p>

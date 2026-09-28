@@ -3,24 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     position: relative;
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 header{
   background-color: rgb(240, 244, 245) ;
   height: 100px;
-  position: sticky;
   min-width: 100%;
-  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: auto;
+  transition: 0.3s ease;  
+
 
     
 
+}
+header.scrolled{
+
+   background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .container{
@@ -45,11 +59,21 @@ header{
   text-decoration: none;
   align-items: center;
   list-style-type: none;
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 
+}
+.header-list a{
+  text-decoration: none;
+  color: #555;
+
+
+}
+.header-list a.active{
+  color: #02317e;
 }
 .list{
   text-decoration: none;
@@ -74,7 +98,8 @@ header{
   background-color: rgb(240, 244, 245);
   justify-content: center;
   align-items: center;
-  height: 700px;
+  min-height: 700px;
+  height: auto;
 
 
 }
@@ -135,7 +160,9 @@ font-family: "Quicksand", sans-serif;
 }
 
 .profile-pic img{
-  width: 100%;
+  width: 80%;
+  border-radius: 30%;
+  
 }
 .hero {
     position: relative;
@@ -143,27 +170,12 @@ font-family: "Quicksand", sans-serif;
     background: #f3f6ff;
 }
 
-.wave-border {
-    position: absolute;
-    bottom: -166px;
-    left: 0;
-    width: 100%;
-    height: 220px;
-    z-index: 2;
-}
 
-.wave-border svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.wave-line{
-  transform: translateY(23px);
-}
 
 .about-container{
   display: flex;
-  width: 1100px;
+  width: 90%;
+  max-width: 1100px;
   margin: 30px auto;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
@@ -172,11 +184,10 @@ font-family: "Quicksand", sans-serif;
 }
 
 .mypic img{
-  width: 90%;  
+  width: 80%;  
 }
 .text-1{
-  font-size: calc(1.425rem + 2.1vw);
-    font-weight: 300;
+  font-size: 50px;
     line-height: 1.2;
     font-weight: 600;
     line-height: 1.4;
@@ -187,7 +198,7 @@ font-family: "Quicksand", sans-serif;
 }
 .text-2{
   color: #979797 !important;
-  font-size: 14px !important;
+  font-size: 17px !important;
   margin: 20px;
   display: block;
   margin-block-start: 1em;
@@ -255,7 +266,8 @@ font-family: "Quicksand", sans-serif;
 
 .tab-content {
     display: none;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin-top: 20px;
 }
 
@@ -274,6 +286,12 @@ font-family: "Quicksand", sans-serif;
     color: #7963e0;
     font-size: 22px;
     font-weight: bold;
+}
+.tab-btn{
+     font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .progress {
@@ -299,6 +317,12 @@ font-family: "Quicksand", sans-serif;
 
 /* ---------------- EXPERIENCE ---------------- */
 
+.text-1{
+     font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 .experience-item,
 .education-item {
     margin-bottom: 20px;
@@ -320,10 +344,16 @@ font-family: "Quicksand", sans-serif;
 .experience-item p,
 .education-item p {
     color: #68758c;
-    font-size: 15px;
+    font-size: 16px;
+
 }
+.skill-title{
 
-
+   font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 /* ---------------- EDUCATION ---------------- */
 
 .education-item {
@@ -391,7 +421,8 @@ text-align: center;
 }
 
 .achievements{
-  width: 570px;
+  width:90% ;
+  max-width: 570px;
   text-align: center;
 
 }
@@ -497,7 +528,8 @@ text-align: center;
 
 
 .Pricing-title{
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -559,8 +591,11 @@ text-align: center;
 }
 
 .card-one{
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  max-width: 350px;
+  min-height: 350px;
+  height: auto;
+
 
 }
 .card-one-top{
@@ -673,7 +708,8 @@ text-align: center;
 }
 
 .testimonials-info{
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   margin: auto;
 
 }
@@ -707,7 +743,9 @@ text-align: center;
   position: absolute;
 
   width: 450px;
+  max-width: 450px;
   min-height: 290px;
+  height: auto;
 
   padding: 60px 35px 30px;
 
@@ -830,9 +868,9 @@ text-align: center;
 }
 
 .contact-form {
-    width: 670px;
-    max-width: 1250px;
-    height: 285px;
+  width: 90%;
+    max-width: 670px;
+    height: auto;
     border: 1px solid #97979779;
 
     border-radius: 25px;
@@ -906,6 +944,8 @@ textarea{
 .forms-two{
   display: flex;
   flex-direction: column;
+  width: 90%;
+  max-width: 600px;
 
 }
 .message-box{
@@ -938,7 +978,8 @@ textarea{
 
 .message-inbox{
   height: 200px;
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
   border-radius: 20px;
   border: 1px solid rgb(187, 185, 185);
 }
@@ -969,4 +1010,453 @@ textarea{
 
 
                      
-                    
+      /* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+/* ---------- TABLETS ---------- */
+@media (max-width: 900px) {
+
+  /* HEADER */
+  .container {
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .header-list {
+    gap: 5px;
+  }
+
+  .list {
+    margin: 5px;
+  }
+
+  .quote-btn {
+    width: 120px;
+  }
+
+
+  /* HERO */
+  .hero-section {
+    height: auto;
+    min-height: 650px;
+    padding: 70px 30px;
+  }
+
+  .about h2 {
+    font-size: 40px;
+  }
+
+  .profile-pic,
+  .about {
+    max-width: 50%;
+  }
+
+
+  /* ABOUT */
+  .about-container {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mypic {
+    text-align: center;
+  }
+
+  .mypic img {
+    width: 70%;
+  }
+
+  .about-section {
+    width: 90%;
+  }
+
+
+  /* ACHIEVEMENTS */
+  .achievement-container {
+    flex-direction: column;
+  }
+
+  .achievements {
+    width: 90%;
+    max-width: 570px;
+  }
+
+
+  /* PRICING */
+  .Pricing-title {
+    width: 90%;
+  }
+
+  .card-container,
+  .card-group {
+    flex-wrap: wrap;
+  }
+
+
+  /* TESTIMONIALS */
+  .testimonial-card {
+    width: 70%;
+    max-width: 450px;
+  }
+
+  .testimonial-card.left {
+    transform: translateX(-350px) scale(0.8);
+  }
+
+  .testimonial-card.right {
+    transform: translateX(350px) scale(0.8);
+  }
+
+
+  /* CONTACT */
+  .contact-form {
+    width: 90%;
+  }
+
+  .message-inbox {
+    width: 90%;
+  }
+}
+
+
+ /* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+        width: 100%;
+        min-width: 0;
+        height: 75px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .header-list {
+        display: none;
+    }
+
+    .headerlogo {
+        width: 60px;
+    }
+
+    .quote-btn {
+        width: 110px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero-section {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 50px 20px ;
+    }
+
+    .about,
+    .profile-pic {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .about h4 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .about h5 {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .profile-pic {
+        margin-top: 30px;
+    }
+
+    .profile-pic img {
+        width: 90%;
+        max-width: 350px;
+    }
+
+
+    /* ================= WAVE ================= */
+
+    .wave-border {
+        width: 100%;
+        bottom: -80px;
+        height: 120px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-container {
+        width: calc(100% - 30px);
+        max-width: 100%;
+        margin: 60px auto 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        box-sizing: border-box;
+    }
+
+    .mypic {
+        width: 100%;
+    }
+
+    .mypic img {
+        width: 100%;
+        display: block;
+    }
+
+    .about-section {
+        width: calc(100% - 30px);
+        max-width: 100%;
+        margin: 50px auto;
+        padding: 0;
+    }
+
+
+    /* ================= TABS ================= */
+
+    .tabs {
+        width: 100%;
+        display: flex;
+        gap: 5px;
+        justify-content: space-between;
+    }
+
+    .tab-btn {
+        font-size: 16px;
+        padding: 0 5px 10px;
+        white-space: nowrap;
+    }
+
+    .tab-content {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+
+    /* ================= ACHIEVEMENTS ================= */
+
+    .achievement-container {
+        width: 100%;
+        display: block;
+    }
+
+    .achievements {
+        width: calc(100% - 20px);
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .list-one {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+
+        margin: 20px 0;
+        padding: 20px 15px;
+
+        box-sizing: border-box;
+    }
+
+    .list-one h4 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .list-one p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 25px;
+        box-sizing: border-box;
+    }
+
+
+    /* ================= PRICING ================= */
+
+    .Plans-cards {
+        width: 100%;
+    }
+
+    .Pricing-title {
+        width: calc(100% - 30px);
+        max-width: 100%;
+    }
+
+    .card-container,
+    .card-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card-one {
+        width: calc(100% - 30px);
+        max-width: 350px;
+        height: auto;
+    }
+
+    .card-one-top,
+    .card-one-bottom {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card-one-bottom {
+        height: auto;
+    }
+
+    .card-one-bottom li {
+        margin: 15px 0;
+        line-height: 1.5;
+    }
+
+
+    /* ================= TESTIMONIALS ================= */
+
+    .testimonials {
+        width: 100%;
+        padding: 100px 0;
+        overflow: hidden;
+    }
+
+    .testimonials-info {
+        width: calc(100% - 30px);
+        max-width: 100%;
+    }
+ .carousel {
+        width: 100%;
+        height: 430px;
+        overflow: hidden;
+    }
+
+    .testimonial-card {
+        width: calc(100% - 40px);
+        max-width: 450px;
+        min-height: 290px;
+
+        box-sizing: border-box;
+
+        padding: 60px 20px 30px;
+    }
+
+    /* Don't allow side cards to create overflow */
+    .testimonial-card.left,
+    .testimonial-card.right {
+        opacity: 0;
+        transform: translateX(0) scale(.8);
+        pointer-events: none;
+    }
+
+    .testimonial-card p {
+        width: 100%;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .input-container {
+        width: 100%;
+        margin: 30px 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forms-info {
+        width: calc(100% - 30px);
+        margin: auto;
+    }
+
+    .contact-form {
+        width: calc(100% - 30px);
+        max-width: 670px;
+        height: auto;
+        min-height: 285px;
+        box-sizing: border-box;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        font-size: 16px;
+    }
+
+    .form-group input {
+        height: 60px;
+    }
+
+    .mess-indox {
+        height: 100px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer-section {
+        width: 100%;
+        min-height: 120px;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 25px 15px;
+        gap: 15px;
+
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
