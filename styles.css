@@ -361,28 +361,7 @@ font-family: "Quicksand", sans-serif;
 }
 
 
-/* ---------------- MOBILE ---------------- */
 
-@media (max-width: 600px) {
-
-    .about-section {
-        width: 50%;
-    }
-
-    .tabs {
-        gap: 10px;
-        justify-content: space-between;
-    }
-
-    .tab-btn {
-        font-size: 17px;
-        padding: 0 10px 15px;
-    }
-
-    .skill-title {
-        font-size: 18px;
-    }
-}
 
 
 
@@ -867,12 +846,20 @@ text-align: center;
   transform: scale(1.2);
 }
 
+
+.input-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin:30px ;
+}
+
 .contact-form {
   width: 90%;
     max-width: 670px;
-    height: auto;
+    height: fit-content;
     border: 1px solid #97979779;
-
+    min-height: 0;
     border-radius: 25px;
     overflow: hidden;
     background: white;
@@ -908,7 +895,7 @@ font-family: "Quicksand", sans-serif;
 .form-group textarea {
     width: 100%;
     padding: 10px 10px;
-    
+    height: 70px;
     border: none;
     outline: none;
     font-size: 15px;
@@ -921,7 +908,6 @@ font-family: "Quicksand", sans-serif;
 }
 
 .form-group input {
-    height: 70px;
       font-size: 18px;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
@@ -983,12 +969,7 @@ textarea{
   border-radius: 20px;
   border: 1px solid rgb(187, 185, 185);
 }
-.input-container{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin:30px ;
-}
+
 .footer-section{
   display: flex;
   align-items: center;
@@ -1007,7 +988,6 @@ textarea{
 .Privacy-terms a{
   margin-left: 20px;
 }
-
 
                      
       /* =====================================================
@@ -1169,11 +1149,11 @@ textarea{
         width: 100%;
         height: auto;
         min-height: auto;
-
+        justify-content: center;
+        align-items: center;
         display: flex;
         flex-direction: column;
-
-        padding: 50px 20px ;
+        padding: 40px 20px ;
     }
 
     .about,
@@ -1202,22 +1182,17 @@ textarea{
     }
 
     .profile-pic {
-        margin-top: 30px;
+      width: 230px;
+      height: auto;
+      margin-top: 0;
     }
 
     .profile-pic img {
-        width: 90%;
-        max-width: 350px;
-    }
-
-
-    /* ================= WAVE ================= */
-
-    .wave-border {
         width: 100%;
-        bottom: -80px;
-        height: 120px;
+        height: auto;
+        display: block;
     }
+
 
 
     /* ================= ABOUT ================= */
@@ -1225,7 +1200,7 @@ textarea{
     .about-container {
         width: calc(100% - 30px);
         max-width: 100%;
-        margin: 60px auto 30px;
+        margin: 50px auto 20px;
 
         display: flex;
         flex-direction: column;
@@ -1234,10 +1209,12 @@ textarea{
     }
 
     .mypic {
-        width: 100%;
+        width: 220px;
+        height: 280px;
     }
 
     .mypic img {
+        object-fit: cover;
         width: 100%;
         display: block;
     }
@@ -1416,8 +1393,7 @@ textarea{
     .contact-form {
         width: calc(100% - 30px);
         max-width: 670px;
-        height: auto;
-        min-height: 285px;
+        height: fit-content;
         box-sizing: border-box;
     }
 
@@ -1458,5 +1434,7 @@ textarea{
 
         box-sizing: border-box;
         text-align: center;
+    }
+    .contact-form{
     }
 }
