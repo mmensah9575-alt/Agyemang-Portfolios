@@ -40,7 +40,7 @@ header.scrolled{
 .container{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: auto;
   height: 100%;
 
@@ -100,6 +100,7 @@ header.scrolled{
   align-items: center;
   min-height: 700px;
   height: auto;
+  gap: 50px;
 
 
 }
@@ -160,8 +161,9 @@ font-family: "Quicksand", sans-serif;
 }
 
 .profile-pic img{
-  width: 80%;
-  border-radius: 30%;
+  width: 70%;
+  height: 100%;
+  border-radius: 50%;
   
 }
 .hero {
@@ -179,7 +181,6 @@ font-family: "Quicksand", sans-serif;
   margin: 30px auto;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-    margin-top: 30px;
 
 }
 
@@ -269,6 +270,7 @@ font-family: "Quicksand", sans-serif;
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
+    padding: 10px;
 }
 
 .tab-content.active {
