@@ -28,8 +28,17 @@ header{
 
 
     
-
 }
+
+h2{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 50px;
+}
+
+
 header.scrolled{
 
    background: rgba(255, 255, 255, 0.72);
@@ -73,7 +82,7 @@ header.scrolled{
 
 }
 .header-list a.active{
-  color: #02317e;
+  color: #275297;
 }
 .list{
   text-decoration: none;
@@ -81,11 +90,11 @@ header.scrolled{
 }
 .quote-btn{
   width: 150px;
-  height: 40px;
+  height: 50px;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   color: #fff;
-  background-color: #7963e0;
+  background-color: #275297;
   font-family: sans-serif;
   font-size: 16px;
   text-align: center;
@@ -106,7 +115,7 @@ header.scrolled{
 }
 
 .about p{
-  color: #7963e0;
+  color:  #275297;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -118,14 +127,17 @@ font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 50px;  
+  font-size: 50px;
+  margin-top: 5px;  
+  margin-bottom: 20px;
 }
-.about h4, h5{
+.about h4{
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 20px;  
+  font-size: 20px;
+  margin-bottom:5px ;  
 }
 .about h5{
    font-family: "Quicksand", sans-serif;
@@ -189,13 +201,14 @@ font-family: "Quicksand", sans-serif;
 }
 .text-1{
   font-size: 50px;
-    line-height: 1.2;
-    font-weight: 600;
-    line-height: 1.4;
+    
    font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;    
+}
+.text-1 span{
+  color: #275297;
 }
 .text-2{
   color: #979797 !important;
@@ -284,9 +297,8 @@ font-family: "Quicksand", sans-serif;
     align-items: center;
 
     margin-bottom: 15px;
-
-    color: #7963e0;
-    font-size: 22px;
+     color:  #275297;
+    font-size: 17px;
     font-weight: bold;
 }
 .tab-btn{
@@ -297,7 +309,7 @@ font-family: "Quicksand", sans-serif;
 }
 
 .progress {
-    width: 80%;
+    width: 90%;
     height: 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -309,11 +321,14 @@ font-family: "Quicksand", sans-serif;
 }
 
 .blue {
-    background: #7963e0;
+    background:  #275297;
 }
 
 .yellow {
     background: #e5a526;
+}
+.one{
+  height: 6px;
 }
 
 
@@ -387,7 +402,7 @@ text-align: center;
 
 }
 .title {
-  color: #7963e0;
+  color:  #275297;
   font-optical-sizing: auto;
   font-style: normal;  
 }
@@ -424,13 +439,14 @@ text-align: center;
 
 
 .list-one h4{
-  color: #7963e0;
-   font-family: "Montserrat", sans-serif;
+  color:  #275297;
+    font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   font-size: 20px;
   margin-bottom: 20px;
+  
 }
 .list-one span{
   color: #818080;
@@ -445,7 +461,7 @@ text-align: center;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 18px; 
+  font-size: 17px; 
   color: #979797;
 
 }
@@ -483,7 +499,7 @@ text-align: center;
   top: 35px;
   width: 18px;
   height: 18px;
-  border: 2px solid #7963e0;
+  border: 2px solid  #275297;
   border-radius: 50%;
   background: white;
   z-index: 2;
@@ -497,7 +513,7 @@ text-align: center;
   top: 45px;
   width: 20px;
   height: 2px;
-  background: #7963e0;
+  background:  #275297;
 }
 
 
@@ -519,23 +535,27 @@ text-align: center;
 }
 
 .title-description p{
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   color: #979797;
-  font-weight: 600;
+  font-weight: 500;
 
 }
 .title-description h2{
-    color: #7963e0;
-   font-family: "Montserrat", sans-serif;
+    font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 20px;
+  font-style: normal;
+  font-size: 50px;
 }
 
+.title-description h2 span{
+      color:  #275297;
+
+}
 .Pricing-btn{
   display: flex;
   justify-content: center;
@@ -625,9 +645,10 @@ text-align: center;
   color: #f3f6ff;
   border: none;
   border-radius: 10px;
-  background-color: #7963e0;
+  background-color:  #275297;
   margin-top: 20px;
 }
+
 .card-one:hover .card-one-top{
  background-color:rgb(41, 17, 63);
  border: #243b63;
@@ -643,7 +664,7 @@ text-align: center;
   gap: 20px;
 }
 .card-two{
-  border-color: #7963e0;
+  border-color:  #275297;
 }
 
 
@@ -665,7 +686,6 @@ text-align: center;
 /* Toggle Buttons Styling */
 .toggle-btn {
   padding: 10px 20px;
-  border: 1px solid #ccc;
   background-color: transparent;
   cursor: pointer;
   border-radius: 8px;
@@ -676,7 +696,7 @@ text-align: center;
 .toggle-btn.active {
   background-color: #f3f6ff; /* Matches active dark background */
   border: none;
-  color: #243b63;
+  color:  #275297;
 }
 
 
@@ -690,26 +710,33 @@ text-align: center;
 
 .testimonials-info{
   width: 90%;
-  max-width: 500px;
+  max-width: 530px;
   margin: auto;
 
 }
-.testimonials-info{
-    font-family: "Montserrat", sans-serif;
+
+.testimonials-info h2{
+  font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 20px;
+  font-size: 50px;
+  margin-bottom: 15px;
 }
+
 .testimonials-info p{
-    font-size: 15px;
+    font-size: 16px;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   color: #979797;  
+  margin-bottom: 10px;
 
 
+}
+.testimonials-info span{
+  color:  #275297;
 }
 .carousel {
   position: relative;
@@ -731,7 +758,7 @@ text-align: center;
   padding: 60px 35px 30px;
 
   background: white;
-  border: 2px solid #2d5da8;
+  border: 2px solid  #275297;
   border-radius: 30px;
 
   text-align: center;
@@ -858,7 +885,7 @@ text-align: center;
 
 .contact-form {
   width: 90%;
-    max-width: 670px;
+    max-width: 600px;
     height: fit-content;
     border: 1px solid #97979779;
     min-height: 0;
@@ -872,18 +899,18 @@ text-align: center;
 
 .forms-info h1{
   font-style: normal;  
-   font-size: 30px;
+   font-size: 50px;
 font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 
 
 }
-.forms-info h1 span{
-  color: #7963e0;
+.forms-info span{
+  color:  #275297;
 }
 .forms-info p{
-      font-size: 15px;
+      font-size: 16px;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -941,8 +968,7 @@ textarea{
     height: 50px;
     border: none;
     border-radius: 25px;
-    
-    background:#7963e0;
+    background:#1e4074;    
     color: rgb(255, 255, 255);
     font-size: 18px;
     margin-top: 30px;
@@ -951,7 +977,7 @@ textarea{
 }
 
 .message-box:hover{
-      background:#8772e4;
+      background:#2d5daa;
 
 }
 
@@ -1107,7 +1133,7 @@ textarea{
    MOBILE RESPONSIVE
    ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     html,
     body {
@@ -1123,6 +1149,8 @@ textarea{
         min-width: 0;
         height: 75px;
     }
+
+
 
     .container {
         width: 100%;
@@ -1163,13 +1191,14 @@ textarea{
         width: 100%;
         max-width: 100%;
     }
+    
 
     .about {
         text-align: center;
     }
 
     .about h2 {
-        font-size: 32px;
+        font-size: 24px;
         line-height: 1.2;
     }
 
@@ -1179,7 +1208,7 @@ textarea{
     }
 
     .about h5 {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.6;
     }
 
@@ -1187,12 +1216,14 @@ textarea{
       width: 230px;
       height: auto;
       margin-top: 0;
+          order: -1;
     }
 
     .profile-pic img {
         width: 100%;
         height: auto;
         display: block;
+    
     }
 
 
@@ -1209,16 +1240,18 @@ textarea{
 
         box-sizing: border-box;
     }
+    .text-1{
+      font-size: 24px;
+    }
 
     .mypic {
-        width: 220px;
-        height: 280px;
+        width: 0px;
+        height:0px;
     }
 
     .mypic img {
-        object-fit: cover;
-        width: 100%;
-        display: block;
+      width: 0px;
+      display: none;
     }
 
     .about-section {
@@ -1257,7 +1290,16 @@ textarea{
         width: 100%;
         display: block;
     }
+    .text h2{
+      font-size: 24px;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;  
+   }
 
+   .list-one h4{
+    font-size: 18px;
+   }
     .achievements {
         width: calc(100% - 20px);
         max-width: 100%;
@@ -1276,7 +1318,7 @@ textarea{
     }
 
     .list-one h4 {
-        font-size: 17px;
+        font-size: 20px;
         line-height: 1.5;
     }
 
@@ -1331,6 +1373,12 @@ textarea{
         margin: 15px 0;
         line-height: 1.5;
     }
+.title-description h2{
+  font-size: 24px;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;  
+   }
 
 
     /* ================= TESTIMONIALS ================= */
@@ -1344,6 +1392,9 @@ textarea{
     .testimonials-info {
         width: calc(100% - 30px);
         max-width: 100%;
+    }
+    .testimonials-info h2{
+        font-size: 24px;
     }
  .carousel {
         width: 100%;
@@ -1391,6 +1442,9 @@ textarea{
         width: calc(100% - 30px);
         margin: auto;
     }
+    .forms-info h2{
+      font-size: 24px;
+    }
 
     .contact-form {
         width: calc(100% - 30px);
@@ -1437,6 +1491,5 @@ textarea{
         box-sizing: border-box;
         text-align: center;
     }
-    .contact-form{
-    }
+   
 }
