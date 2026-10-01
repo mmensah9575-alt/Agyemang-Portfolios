@@ -106,7 +106,8 @@ function Header() {
         </nav>
 
         {/* Quote button */}
-        <a href="#contact" className="quote-btn">
+        <a href="#contact" 
+        className="quote-btn">
           Get a quote
         </a>
       </div>

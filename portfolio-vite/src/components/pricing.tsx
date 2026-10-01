@@ -32,7 +32,6 @@ function Pricing() {
             }`}
             onClick={() => setPricingType("individual")}
           >
-            <img src="" alt="" />
 
             <h5>Individual</h5>
 
@@ -45,7 +44,6 @@ function Pricing() {
             }`}
             onClick={() => setPricingType("professional")}
           >
-            <img src="" alt="" />
 
             <h5>Professional</h5>
 

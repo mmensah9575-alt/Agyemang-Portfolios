@@ -5,6 +5,7 @@ import Hero from "./components/hero.tsx";
 import Testimonials from "./components/testimonials.tsx";
 import FormsFooter from "./components/forms-n-footer.tsx";
 import Pricing from "./components/pricing.tsx";
+import Footer from "./components/footer.tsx"
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
       <Pricing />
       <Testimonials />
       <FormsFooter />
+      <Footer />
     </div>
   );
 }

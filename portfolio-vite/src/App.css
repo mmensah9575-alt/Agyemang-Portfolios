@@ -96,6 +96,7 @@ header.scrolled{
   text-align: center;
   padding:10px ;
   text-decoration: none;
+  cursor: pointer;
 
 
 }
@@ -1012,8 +1013,11 @@ textarea{
   font-style: normal;
   
 }
+
 .Privacy-terms a{
   margin-left: 20px;
+  text-decoration: none;
+  color:#ccc;
 }
 .orcta{
   text-decoration: none;
